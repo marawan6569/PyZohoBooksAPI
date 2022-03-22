@@ -1,4 +1,4 @@
-from PyZohoBooksAPI import ZohoAuth, Contacts
+from PyZohoBooksAPI import ZohoAuth, Contacts, Invoices
 
 # auth = ZohoAuth(
 #     client_id='1000.GD6CJ7MWC8AWC6CZI1ZL474UYURQXS',
@@ -9,7 +9,7 @@ from PyZohoBooksAPI import ZohoAuth, Contacts
 # print(auth.refresh_token(refresh_token='1000.455b2011ed031afa48df852cfcfe7f9b.0aeb72a01ad1841ccbf5df8e548f9445'))
 
 
-# contacts = Contacts(token='1000.2e7184ae114c99a4bb34f2f0ffe53861.7b7ab7acead210fca6743d92979e74d4',
+# contacts = Contacts(token='1000.974b30cc15660e53a11904fca98066ea.607e25ecd3f226ff0484960dd020e74e',
 #                     organization_id='774525475')
 
 # _, cl = contacts.contacts_list()
@@ -25,3 +25,23 @@ from PyZohoBooksAPI import ZohoAuth, Contacts
 
 # _, contact = contacts.create_contact(contact_data={'contact_name': 'ahmed mohamed'})
 # print(_, contact)
+
+# invoices = Invoices(token='1000.974b30cc15660e53a11904fca98066ea.607e25ecd3f226ff0484960dd020e74e',
+#                     organization_id='774525475')
+
+# invoice = invoices.create_invoice(invoice_data={
+#     "invoice_number": "test-000001",
+#     "customer_id": "3168296000000075177",
+#     "line_items": [
+#         {
+#             "item_id": "3168296000000075168",
+#         }
+#     ]
+# })
+
+# invoice = invoices.email_an_invoice(invoice_id='3168296000000089012', email_data={
+#     'to_mail_ids': ['marawan6569@gmail.com'],
+#     'subject': 'Invoice from catdogmail.live Inc ',
+#     'body': '<h1>Thank uou ;)</h1>'
+# })
+# print(invoice)
